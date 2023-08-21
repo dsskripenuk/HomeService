@@ -1,0 +1,30 @@
+﻿@model ServiceItem
+@{
+    ViewBag.Title = Model.MetaTitle;
+    ViewBag.Description = Model.MetaDescription;
+    ViewBag.Keywords = Model.MetaKeywords;
+}
+
+@*<div>
+    <h2>
+        @Model.Title
+    </h2>
+    <h2>
+        @Model.Subtitle
+    </h2>
+    <div>
+        <img class="img-block" src="@Model.TitleImagePath" />
+    </div>
+</div>
+<div>
+    @Html.Raw(Model.Text)
+</div>*@
+
+<div class="card mb-3">
+  <img class="card-img-top" src="@Model.TitleImagePath" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">@Model.Title</h5>
+    <p class="card-text">@Html.Raw(Model.Text)</p>
+    <p class="card-text"><small class="text-muted">@Model.Subtitle</small></p>
+  </div>
+</div>

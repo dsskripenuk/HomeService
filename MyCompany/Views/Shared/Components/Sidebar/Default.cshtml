@@ -1,0 +1,23 @@
+﻿@model IQueryable<ServiceItem>
+
+@if (Model?.Any() == true)
+{
+    <h2 style="color: #fff">Наші послуги</h2>
+    <div class="card-deck">
+        @foreach (ServiceItem entity in Model)
+        {
+            <div class="card text-white bg-info mb-3">
+                <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">
+                    <img class="card-img-top" src="@entity.TitleImagePath" alt="Card image cap">
+                </a>
+
+                <div class="card-body">
+                    <h5 class="card-title">@entity.Title</h5>
+                    <p class="card-text">@entity.Subtitle</p>
+                </div>
+            </div>
+
+        }
+    </div>
+}
+

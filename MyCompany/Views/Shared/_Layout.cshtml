@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    @await Html.PartialAsync("MetatagsPartial")
+    <link rel="stylesheet" href="~/css/carousel.css asp-append-version="true" />
+    @await Html.PartialAsync("CssPartial")
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div id="page-wrapper">
+        @await Html.PartialAsync("HeaderPartial")
+        <div class="card" style="background-color: #191919">
+            <div class="card-body" style="text-align: center">
+                <a href="tel:+380981276569"><h3 style="text-transform: capitalize;">+38 (098) 127-65-69 - Ігор</h3></a>
+                <a href="tel:+380981276569"><h3 style="text-transform: capitalize;">+38 (050) 508-94-74 - Ігор</h3></a><br/>
+                <h3 style="color: white; text-transform: uppercase;">Вирішимо всі ваші проблеми швидко та без нервів!</h3>
+                <h3 style="color: white; text-transform: uppercase;">Таких цін ви не знайдете ніде!</h3>
+            </div>
+        </div>
+        <div id="main">
+            <div class="container">
+                <div class="row main-row">
+                    <div class="col-12 col-12-medium">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+        @await Html.PartialAsync("FooterPartial")
+    </div>
+    @await Html.PartialAsync("ScriptsPartial")
+</body>
+
+</html>
